@@ -1,8 +1,14 @@
-function convertToRoman(number) {
-	
-	return "I";
-}
+function RomanNumeralConverter() {
+	var standardNumerals = {
 
-function convertFromRoman(roman) {
-	return "";
+	};
+
+	this.ConvertToRoman = function(number) {
+
+		return "I";
+	}
+
+	this.ConvertFromRoman = function(roman) {
+		return "";
+	}
 }

@@ -11,14 +11,15 @@ var romanLetterArray = {
 	1066: "MLXVI",
 	1989: "MCMLXXXIX"
 };
+var rnc = new RomanNumeralConverter();
 QUnit.test("Number to Roman", function(assert) {
 	for(var n in romanLetterArray){
-		assert.equal(convertToRoman(n), romanLetterArray[n]);
+		assert.equal(rnc.ConvertToRoman(n), romanLetterArray[n]);
 	}
 });
 
 QUnit.test("Roman to Number", function(assert) {
 	for(var n in romanLetterArray){
-		assert.equal(convertFromRoman(romanLetterArray[n]), n);
+		assert.equal(rnc.ConvertFromRoman(romanLetterArray[n]), n);
 	}
 });
