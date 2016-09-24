@@ -1,3 +1,8 @@
-QUnit.test( "hello test", function( assert ) {
-  assert.ok( 1 == "1", "Passed!" );
-});
+function convertToRoman(number) {
+	
+	return "";
+}
+
+function convertFromRoman(roman) {
+	return "";
+}
