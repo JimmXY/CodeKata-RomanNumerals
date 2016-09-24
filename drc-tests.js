@@ -1,15 +1,23 @@
-QUnit.test("1 to Roman", function(assert) {
-	assert.equal("I", convertToRoman(1));
+var romanLetterArray = {
+	1 : "I",
+	2 : "II",
+	3 : "III",
+	4: "IV",
+	5: "V",
+	6: "VI",	
+	9: "IX",
+	10: "X",
+	11: "XI",
+	14: "XIV"
+};
+QUnit.test("Number to Roman", function(assert) {
+	for(var n in romanLetterArray){
+		assert.equal(convertToRoman(n), romanLetterArray[n]);
+	}
 });
 
-QUnit.test("2 to Roman", function(assert) {
-	assert.equal("II", convertToRoman(1));
-});
-
-QUnit.test("4 to Roman", function(assert) {
-	assert.equal("IV", convertToRoman(1));
-});
-
-QUnit.test("5 to Roman", function(assert) {
-	assert.equal("V", convertToRoman(1));
+QUnit.test("Roman to Number", function(assert) {
+	for(var n in romanLetterArray){
+		assert.equal(convertFromRoman(romanLetterArray[n]), n);
+	}
 });
